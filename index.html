@@ -8,8 +8,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>testImgPicker</title>
-    <style>      
-   
+    <style>
         html {
             box-sizing: border-box;
         }
@@ -131,43 +130,20 @@
             </div>
             <div class="spinner"></div>
         </div>
-
-
     </div>
     
-    <script>
-          let img = document.createElement("img");
-          img.src = "https://picsum.photos/200/301";
-          img.style.width = "100%";
-          img.style.height = "100%";
-          img.style.display ="none"
-          document.body.appendChild(img);
-        window.addEventListener("orientationchange", function() {
-         if(window.innerHeight > window.innerWidth){ 
-        
-            img.style.display ="block"
-          alert("Please use Landscape!");
-        }
-        else{
-            img.style.display ="none"
-
-        }
-       //alert(window.orientation);
-}, false);
-   </script>
-
     <script>
         var db = indexedDB.open("dummy_indexdb", 1); // iOS 14.6 fix; the call to open indexdb hangs forever otherwise
 
         const buildUrl = "Build";
-        const loaderUrl = buildUrl + "/Web.loader.js";
+        const loaderUrl = buildUrl + "/Test.loader.js";
         const config = {
-            dataUrl: buildUrl + "/Web.data",
-            frameworkUrl: buildUrl + "/Web.framework.js",
-            codeUrl: buildUrl + "/Web.wasm",
+            dataUrl: buildUrl + "/Test.data",
+            frameworkUrl: buildUrl + "/Test.framework.js",
+            codeUrl: buildUrl + "/Test.wasm",
         streamingAssetsUrl: "StreamingAssets",
             companyName: "DefaultCompany",
-            productName: "TreasureHunt",
+            productName: "testImgPicker",
             productVersion: "1.0",
         };
 
