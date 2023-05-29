@@ -8,7 +8,17 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <title>testImgPicker</title>
-    <style>
+    <style  type="text/css">      
+    #warning-message { display: none; }
+    @media only screen and (orientation:portrait){
+        #wrapper { display:none; }
+       
+    }
+    @media only screen and (orientation:landscape){
+        #warning-message { display:none; }
+        #warning-message { display:block; }
+    }
+
         html {
             box-sizing: border-box;
         }
@@ -130,8 +140,17 @@
             </div>
             <div class="spinner"></div>
         </div>
+
+
     </div>
     
+    <div id="wrapper">
+        <!-- your html for your website -->
+    </div>
+    <div id="warning-message">
+        this website is only viewable in landscape mode
+    </div>
+
     <script>
         var db = indexedDB.open("dummy_indexdb", 1); // iOS 14.6 fix; the call to open indexdb hangs forever otherwise
 
