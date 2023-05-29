@@ -136,14 +136,14 @@
         var db = indexedDB.open("dummy_indexdb", 1); // iOS 14.6 fix; the call to open indexdb hangs forever otherwise
 
         const buildUrl = "Build";
-        const loaderUrl = buildUrl + "/Test.loader.js";
+        const loaderUrl = buildUrl + "/Web.loader.js";
         const config = {
-            dataUrl: buildUrl + "/Test.data",
-            frameworkUrl: buildUrl + "/Test.framework.js",
-            codeUrl: buildUrl + "/Test.wasm",
+            dataUrl: buildUrl + "/Web.data",
+            frameworkUrl: buildUrl + "/Web.framework.js",
+            codeUrl: buildUrl + "/Web.wasm",
         streamingAssetsUrl: "StreamingAssets",
             companyName: "DefaultCompany",
-            productName: "testImgPicker",
+            productName: "TreasureHunt",
             productVersion: "1.0",
         };
 
