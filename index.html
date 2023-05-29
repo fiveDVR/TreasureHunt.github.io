@@ -136,15 +136,21 @@
     </div>
     
     <script>
-        
-        window.addEventListener("orientationchange", function() {
-         if(window.innerHeight > window.innerWidth){ 
           let img = document.createElement("img");
           img.src = "https://picsum.photos/200/301";
-          img.style.border = "10px solid orange";
-          img.style.borderRadius = "10px";
+          img.style.width = "100%";
+          img.style.height = "100%";
+          img.style.display ="none"
           document.body.appendChild(img);
+        window.addEventListener("orientationchange", function() {
+         if(window.innerHeight > window.innerWidth){ 
+        
+            img.style.display ="block"
           alert("Please use Landscape!");
+        }
+        else{
+            img.style.display ="none"
+
         }
        //alert(window.orientation);
 }, false);
