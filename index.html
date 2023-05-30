@@ -147,7 +147,15 @@
    
     
    <script>
-          
+           if(window.innerHeight > window.innerWidth){
+
+            ImageLandScape.style.display="none"
+           
+        }
+      else{
+       
+        ImageLandScape.style.display="block"
+      }
              window.addEventListener("orientationchange", function() {
                 const ImageLandScape = document.querySelector("#LandScapeImage");
          if(window.innerHeight > window.innerWidth){
