@@ -147,8 +147,10 @@
    
     
    <script>
-         const ImageLandScape = document.querySelector("#LandScapeImage");
-           if(window.innerHeight > window.innerWidth){
+        const ImageLandScape = document.querySelector("#LandScapeImage");
+        window.addEventListener("resize", myFunction);
+       function myFunction() {
+              if(window.innerHeight > window.innerWidth){
 
             ImageLandScape.style.display="none"
            
@@ -157,18 +159,7 @@
        
         ImageLandScape.style.display="block"
       }
-             window.addEventListener("orientationchange", function() {
-              
-         if(window.innerHeight > window.innerWidth){
-
-            ImageLandScape.style.display="none"
-           
-        }
-      else{
-       
-        ImageLandScape.style.display="block"
-      }
-}, false);
+}
    </script>
 
     <script>
