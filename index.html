@@ -148,6 +148,15 @@
     
    <script>
         const ImageLandScape = document.querySelector("#LandScapeImage");
+        if(window.innerHeight > window.innerWidth){
+
+           ImageLandScape.style.display="block"
+           
+        }
+      else{
+         ImageLandScape.style.display="none"
+       
+      }
         window.addEventListener("resize", myFunction);
        function myFunction() {
               if(window.innerHeight > window.innerWidth){
